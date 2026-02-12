@@ -170,17 +170,16 @@ function saveData() {
   }
 }
 
+
 function loadDataFromStorage() {
   const serializedData = localStorage.getItem(STORAGE_KEY);
   let data = JSON.parse(serializedData);
 
   if (data !== null) {
+    todos.length = 0; // Tambahkan ini untuk mengosongkan array sebelum diisi data dari storage
     for (const todo of data) {
       todos.push(todo);
     }
   }
-
   document.dispatchEvent(new Event(RENDER_EVENT));
-  
-
 }
