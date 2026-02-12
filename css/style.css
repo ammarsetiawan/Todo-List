@@ -32,6 +32,7 @@ header {
     flex-grow: 1;
     height: fit-content;
     max-width:70%;
+    border-radius:40px;
 }
 
 
@@ -187,3 +188,4 @@ input[type=text], input[type=date], .btn-submit:focus {
     }
 
 }
+
