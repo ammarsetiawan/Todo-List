@@ -112,12 +112,11 @@ if (todoObject.isCompleted) {
 // fungsi ini digunakan untuk memindahkan todo dari rak “Yang harus dilakukan” ke “Yang sudah dilakukan”.
 function addTaskToCompleted (todoId) {
   const todoTarget = findTodo(todoId);
- 
   if (todoTarget == null) return;
  
-  todoTarget.isCompleted = true;
-document.dispatchEvent(new Event(RENDER_EVENT));
-saveData();
+  todoTarget.isCompleted = true; // Hanya mengubah status
+  document.dispatchEvent(new Event(RENDER_EVENT));
+  saveData(); 
 }
 
 //  yang mana berfungsi untuk mencari todo dengan ID yang sesuai pada array todos. Agar tidak terjadi error (undefined),
@@ -183,4 +182,5 @@ function loadDataFromStorage() {
 
   document.dispatchEvent(new Event(RENDER_EVENT));
   
+
 }
