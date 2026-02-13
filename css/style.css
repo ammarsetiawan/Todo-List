@@ -19,6 +19,7 @@ header {
     color: white;
     border-radius: 0 0 40px 40px;
     text-align: center;
+    animation: 1s slideIn ease-in-out;
 }
 
 .wrapper {
@@ -36,6 +37,7 @@ header {
     flex-grow: 1;
     height: fit-content;
     max-width: 100%;
+    animation: up 1s ease-in-out;
 }
 
 
@@ -191,21 +193,57 @@ input[type=text], input[type=date], .btn-submit:focus {
 .check-button:focus, .trash-button {
     outline: none;
 }
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin-top: 16px;
-    font-size: 18px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
     background-color: #5F30E2;
     height: 10vh;
     margin: 0;
     position: relative;
-    width: 100%;
+    width: 70%;
     bottom: 0;
+    border-radius: 40px; ;
+    margin-bottom: 16px;
+    animation: 1s fadeIn ease-in-out;
 }
 
+@keyframes fadeIn {
+    from {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+    
+    to {opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        transform: translateY(0);
+    opacity: 1;}
+    
+}
+
+@keyframes slideIn {
+    from {transform: translateY(-200%);}
+    to {transform: translateY(0);}
+}
 
 @media only screen and (max-width: 1024px) {
     .wrapper {
