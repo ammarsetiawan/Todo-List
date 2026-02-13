@@ -53,6 +53,7 @@ header {
 .item:hover{
     box-shadow: #000000 0px 4px 8px;
     transition: .2s ease-in-out;
+    transform: translateY(-10px);
 }
 
 .item > .inner h2 {
@@ -216,6 +217,12 @@ section{
     border-radius: 40px; ;
     margin-bottom: 16px;
     animation: 1s fadeIn ease-in-out;
+    transition: .2s ease-in-out;
+}
+.footer:hover{
+    box-shadow: #000000 0px 4px 8px;
+    transition: .2s ease-in-out;
+    transform: translateY(-4px);
 }
 
 @keyframes fadeIn {
