@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next"
+
 const todos = [];
 const RENDER_EVENT = 'render-todo';
 
@@ -183,3 +185,4 @@ function loadDataFromStorage() {
   document.dispatchEvent(new Event(RENDER_EVENT));
   
 }
+
