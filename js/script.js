@@ -40,10 +40,9 @@ function addTodo() {
  
   const generatedID = generateId();
   const todoObject = generateTodoObject(generatedID, textTodo, timestamp, false);
-  
- 
-  document.dispatchEvent(new Event(RENDER_EVENT));
   todos.push(todoObject);
+  
+  document.dispatchEvent(new Event(RENDER_EVENT));
 saveData()
 }
 
@@ -183,4 +182,5 @@ function loadDataFromStorage() {
   }
   document.dispatchEvent(new Event(RENDER_EVENT));
 }
+
 
