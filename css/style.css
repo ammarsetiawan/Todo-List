@@ -11,10 +11,14 @@ html, body {
     box-sizing: border-box;
 }
 
+
+
 header {
     background: #5F30E2;
     padding: 16px;
     color: white;
+    border-radius: 0 0 40px 40px;
+    text-align: center;
 }
 
 .wrapper {
@@ -24,15 +28,14 @@ header {
 }
 
 .wrapper .container {
-    width: 1024px;
+    width: 70%;
     border-radius: 8px;
     margin: 16px;
     background: #F8F9FA;
     padding: 16px;
     flex-grow: 1;
     height: fit-content;
-    max-width:70%;
-    border-radius:30px;
+    max-width: 100%;
 }
 
 
@@ -43,6 +46,11 @@ header {
     background: white;
     display: flex;
     align-items: center;
+    transition: .2s ease-in-out;
+}
+.item:hover{
+    box-shadow: #000000 0px 4px 8px;
+    transition: .2s ease-in-out;
 }
 
 .item > .inner h2 {
@@ -79,12 +87,23 @@ header {
 input[type=text], input[type=date] {
     font-family: Raleway, sans-serif;
     background: #F5F1FF;
-    border: 2px solid #9475EA;
-    border-radius: 8px;
+    border: 2px solid #0066ff;
+    border-radius: 23px;
     padding: 16px;
     box-sizing: border-box;
     margin-bottom: 8px;
     font-size: 24px;
+    transition: .2s ease-in-out;
+}
+
+input:hover{
+    box-shadow: #000000 0px 4px 8px;
+    transition: .2s ease-in-out;
+}
+
+input:active{
+    transition: .1s ease-in-out;
+    transform: translateY(-8px);
 }
 
 .btn-submit {
@@ -93,16 +112,20 @@ input[type=text], input[type=date] {
     border-radius: 16px;
     padding: 12px 24px;
     border: 2px solid #5F30E2;
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 24px;
     margin-top: auto;
     align-self: flex-end;
     cursor: pointer;
+    font-weight: bold;
+    transition: .2s ease-in-out;
 }
 
 .btn-submit:hover {
     background: #5F30E2;
+    transition: .1s ease-in-out;
     color: white;
+    border: 2px solid #ffffff;
 }
 
 input[type=text], input[type=date], .btn-submit:focus {
@@ -168,6 +191,20 @@ input[type=text], input[type=date], .btn-submit:focus {
 .check-button:focus, .trash-button {
     outline: none;
 }
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background-color: #5F30E2;
+    height: 10vh;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
 
 
 @media only screen and (max-width: 1024px) {
@@ -186,9 +223,19 @@ input[type=text], input[type=date], .btn-submit:focus {
     .form {
         width: 100%;
     }
-
 }
 
-
-
-
+/* untuk layar hp */
+@media (max-width: 390px) {
+    header {
+        text-align: center;
+    }
+    .wrapper .container {
+        width: 100dvh;
+        margin: 0;
+    }
+    .footer{
+        font-size: 16px;
+        font-weight: lighter;
+    }
+}
