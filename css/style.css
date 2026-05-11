@@ -146,8 +146,8 @@ input[type=text], input[type=date], .btn-submit:focus {
 .check-button {
     width: 40px;
     height: 40px;
-    background-repeat:no-repeat;
     background: url('../assets/check-outline.svg');
+    background-repeat: no-repeat;
     background-size: contain;
     margin-left: auto;
     cursor: pointer;
@@ -157,14 +157,14 @@ input[type=text], input[type=date], .btn-submit:focus {
 .check-button:hover {
     background: url('../assets/check-solid.svg');
     background-size: contain;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
 }
 
 .trash-button {
     width: 40px;
     height: 40px;
-    background-repeat:no-repeat;
     background: url('../assets/trash-outline.svg');
+    background-repeat: no-repeat;
     background-size: contain;
     margin-left: 16px;
     cursor: pointer;
@@ -180,8 +180,8 @@ input[type=text], input[type=date], .btn-submit:focus {
 .undo-button {
     width: 40px;
     height: 40px;
-    background-repeat:no-repeat;
     background: url('../assets/undo-ouline.svg');
+    background-repeat: no-repeat;
     background-size: contain;
     margin-left: auto;
     cursor: pointer;
@@ -191,7 +191,7 @@ input[type=text], input[type=date], .btn-submit:focus {
 .undo-button:hover {
     background: url('../assets/undo-ouline.svg');
     background-size: contain;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
 }
 
 .check-button:focus, .trash-button {
